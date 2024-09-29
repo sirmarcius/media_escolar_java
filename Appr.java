@@ -21,8 +21,6 @@ public class App {
         float nota2 = pedirNota(ler, 2);
         float nota3 = pedirNota(ler, 3);
 
-        ler.close();
-
         var media = (nota1 + nota2 + nota3) / 3;
 
         DecimalFormat formato = new DecimalFormat("0.00");
@@ -49,6 +47,7 @@ public class App {
             }
         } while (nota < 0 || nota > 10);
         return nota;
+         ler.close();
     }
 }
 
